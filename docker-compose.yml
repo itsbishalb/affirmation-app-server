@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8000:8000'  # Map host port to container port
+    volumes:
+      - './src:/app/src'  # Mount local source code into the container for live-reloading in development
+    environment:
+      - NODE_ENV=development  # Set environment to development
+
