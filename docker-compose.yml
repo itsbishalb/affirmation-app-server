@@ -10,4 +10,3 @@ services:
       - './src:/app/src'  # Mount local source code into the container for live-reloading in development
     environment:
       - NODE_ENV=development  # Set environment to development
-
